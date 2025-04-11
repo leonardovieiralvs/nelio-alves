@@ -4,19 +4,16 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
+        double conta = 50;
+        int minuto;
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Digite o seu numero como funcionário: ");
-        int numF = input.nextInt();
-        System.out.println("Digite o seu numero de horas trabalhadas: ");
-        int horasT = input.nextInt();
-        System.out.println("Valor que recebe por hora: ");
-        double valor = input.nextDouble();
-
-        double salario = horasT * valor;
-
-        System.out.println("Numero do funcionário: "+numF);
-        System.out.println("Salário Mensal: "+ salario);
-
+        System.out.println("Minutos usados no plano telefonico: ");
+        minuto = input.nextInt();
+        if (minuto > 100) {
+            conta += (minuto - 100) * 2;
+        }
+        System.out.printf("Valor a pagar: R$ %.2f%n", + conta);
+        input.close();
     }
 }
