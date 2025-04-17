@@ -10,7 +10,7 @@ public class Triangle {
     public double resultSides() {
         double result = (a + b + c) / 2;
         result = Math.sqrt(result * (result - a) * (result - b) * (result - c));
-    return result;
+        return result;
     }
 
     public static void higherResult(double valueOne, double valueTwo) {
