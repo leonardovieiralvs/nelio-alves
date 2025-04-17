@@ -19,13 +19,15 @@ public class Test {
         System.out.print("Quantity: ");
         product.quantity = sc.nextInt();
 
-        System.out.println(product);
+        System.out.println("Product data: "+product);
         System.out.print("Enter the number of products to be added in stock: ");
         int add = sc.nextInt();
         product.addProducts(add);
+        System.out.println("Updated data: "+product);
 
         System.out.print("Enter the number of products to be removed from stock: ");
         int remove = sc.nextInt();
         product.removeProducts(remove);
+        System.out.println("Updated data: "+product);
     }
 }

@@ -7,7 +7,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product data: "+name+", $"+price+", "+quantity+" units, Total: $"+totalValueInStock();
+        return name + ", $"+price+ ", " + quantity + " units, Total: $" + totalValueInStock();
     }
 
     public double totalValueInStock() {
@@ -16,16 +16,10 @@ public class Product {
 
     public void addProducts(int quantity) {
         this.quantity += quantity;
-        updateData();
     }
 
 
     public void removeProducts(int quantity) {
         this.quantity -= quantity;
-        updateData();
-    }
-
-    public void updateData() {
-        System.out.println("Updated data: "+name+", $"+this.price+", "+this.quantity+" units, Total: $"+totalValueInStock());
     }
 }
