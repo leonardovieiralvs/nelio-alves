@@ -16,16 +16,16 @@ public class Product {
 
     public void addProducts(int quantity) {
         this.quantity += quantity;
-        updateData(quantity);
+        updateData();
     }
 
 
     public void removeProducts(int quantity) {
         this.quantity -= quantity;
-        updateData(quantity);
+        updateData();
     }
 
-    public void updateData(Object c) {
+    public void updateData() {
         System.out.println("Updated data: "+name+", $"+this.price+", "+this.quantity+" units, Total: $"+totalValueInStock());
     }
 }
