@@ -22,8 +22,8 @@ public class Test {
         triangleY.b = input.nextDouble();
         triangleY.c = input.nextDouble();
 
-        double resultX = triangleX.resultSides(triangleX.a, triangleX.b, triangleX.c);
-        double resultY = triangleY.resultSides(triangleY.a, triangleY.b, triangleY.c);
+        double resultX = triangleX.resultSides();
+        double resultY = triangleY.resultSides();
         System.out.printf("Triangle X area: %.4f%n", resultX);
         System.out.printf("Triangle X area: %.4f%n", resultY);
 

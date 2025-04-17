@@ -4,12 +4,13 @@ public class Triangle {
     public double a;
     public double b;
     public double c;
+    public double d;
 
 
-    public double resultSides(double a, double b, double c) {
+    public double resultSides() {
         double result = (a + b + c) / 2;
         result = Math.sqrt(result * (result - a) * (result - b) * (result - c));
-        return result;
+    return result;
     }
 
     public static void higherResult(double valueOne, double valueTwo) {
