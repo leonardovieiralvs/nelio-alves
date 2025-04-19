@@ -10,24 +10,27 @@ public class Test {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Product product = new Product();
         System.out.println("Enter product data: ");
         System.out.print("Name: ");
-        product.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.print("Price: ");
-        product.price = sc.nextDouble();
+        double price = sc.nextDouble();
         System.out.print("Quantity: ");
-        product.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+        Product product = new Product(name, price, quantity);
+        Product product1 = new Product(name, price);
 
-        System.out.println("Product data: "+product);
+
+        System.out.println("Product data: " + product);
         System.out.print("Enter the number of products to be added in stock: ");
         int add = sc.nextInt();
         product.addProducts(add);
-        System.out.println("Updated data: "+product);
+        System.out.println("Updated data: " + product);
 
         System.out.print("Enter the number of products to be removed from stock: ");
         int remove = sc.nextInt();
         product.removeProducts(remove);
-        System.out.println("Updated data: "+product);
+        System.out.println("Updated data: " + product);
+        System.out.println(product1);
     }
 }

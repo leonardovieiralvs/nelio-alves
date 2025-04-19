@@ -1,4 +1,4 @@
-package applicationCalculatorStatic;
+package introducaoCursoJava.applicationdCalculatorStatic;
 
 public class Calculator {
     public final static double PI = 3.14159;

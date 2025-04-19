@@ -1,4 +1,4 @@
-package introducaoCursoJava.applicationRetangule.entities;
+package introducaoCursoJava.applicationaRetangule.entities;
 
 public class Rectangle {
     public double width;

@@ -1,4 +1,4 @@
-package introducaoCursoJava.applicationEmployee.entities;
+package introducaoCursoJava.applicationcEmployee.entities;
 
 public class Employee {
     public String name;

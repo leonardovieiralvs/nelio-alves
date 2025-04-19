@@ -1,6 +1,6 @@
-package introducaoCursoJava.applicationEmployee;
+package introducaoCursoJava.applicationcEmployee;
 
-import introducaoCursoJava.applicationEmployee.entities.Employee;
+import introducaoCursoJava.applicationcEmployee.entities.Employee;
 
 import java.util.Locale;
 import java.util.Scanner;

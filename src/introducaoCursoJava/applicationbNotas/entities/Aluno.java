@@ -1,4 +1,4 @@
-package introducaoCursoJava.applicationNotas.entities;
+package introducaoCursoJava.applicationbNotas.entities;
 
 public class Aluno {
     public String name;

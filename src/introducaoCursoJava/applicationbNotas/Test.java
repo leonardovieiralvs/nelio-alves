@@ -1,6 +1,6 @@
-package introducaoCursoJava.applicationNotas;
+package introducaoCursoJava.applicationbNotas;
 
-import introducaoCursoJava.applicationNotas.entities.Aluno;
+import introducaoCursoJava.applicationbNotas.entities.Aluno;
 
 import java.util.Locale;
 import java.util.Scanner;

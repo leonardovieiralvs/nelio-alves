@@ -1,6 +1,6 @@
-package introducaoCursoJava.applicationRetangule;
+package introducaoCursoJava.applicationaRetangule;
 
-import introducaoCursoJava.applicationRetangule.entities.Rectangle;
+import introducaoCursoJava.applicationaRetangule.entities.Rectangle;
 
 import java.util.Locale;
 import java.util.Scanner;
