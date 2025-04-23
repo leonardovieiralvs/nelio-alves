@@ -1,17 +1,20 @@
 package introducaoCursoJava.applicationFContaBancaria;
 
 public class ContaBacaria {
-    private final static double SAQUE = 5.00;
-    private final int accountNum;
+    private int accountNum;
     private String name;
-    private double deposit;
     private double balance;
 
-
-    public ContaBacaria(int accountNum, String name, double deposit) {
+    public ContaBacaria(int accountNum, String name, double initialDeposit) {
         this.accountNum = accountNum;
         this.name = name;
-        this.deposit = deposit;
+        balanceAccount(initialDeposit);
+    }
+
+    public ContaBacaria(int accountNum, String name) {
+        this.accountNum = accountNum;
+        this.name = name;
+
     }
 
     @Override
@@ -21,31 +24,11 @@ public class ContaBacaria {
                 ", Balance: $" + this.balance;
     }
 
-    public double balanceAccount(double deposit) {
-        return this.balance += deposit;
+    public void balanceAccount(double deposit) {
+        this.balance += deposit;
     }
 
-    public double withdrawAccount(double withdraw) {
-        return this.balance -= (withdraw + ContaBacaria.SAQUE);
-    }
-
-    public double getAccountNum() {
-        return accountNum;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getDeposit() {
-        return deposit;
-    }
-
-    public void setDeposit(double deposit) {
-        this.deposit = deposit;
+    public void withdrawAccount(double withdraw) {
+        this.balance -= (withdraw + 5);
     }
 }
