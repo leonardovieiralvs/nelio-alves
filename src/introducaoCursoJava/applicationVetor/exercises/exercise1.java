@@ -1,6 +1,5 @@
-package introducaoCursoJava.applicationVetor;
+package introducaoCursoJava.applicationVetor.exercises;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class exercise1 {
@@ -10,18 +9,19 @@ public class exercise1 {
         System.out.print("Quantos numeros você vai digitar? ");
         int cont = sc.nextInt();
 
-        int[] negativos = new int[1];
+        int[] negativos = new int[cont];
         for (int i = 0; i < cont; i++) {
             System.out.print("Digite um numero: ");
             int num = sc.nextInt();
-            if (num == -1) {
-                negativos[0] = num;
+            if (num < 0) {
+                negativos[i] = num;
             }
         }
 
         for (int negativo : negativos) {
-            System.out.println(negativo);
+            if (negativo < 0) {
+                System.out.println(negativo);
+            }
         }
-
     }
 }
