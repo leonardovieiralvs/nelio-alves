@@ -11,15 +11,6 @@ public class People {
         this.altura = altura;
     }
 
-    @Override
-    public String toString() {
-        return "People{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", altura=" + altura +
-                '}';
-    }
-
     public String getName() {
         return name;
     }
