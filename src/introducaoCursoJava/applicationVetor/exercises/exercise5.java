@@ -3,32 +3,38 @@ package introducaoCursoJava.applicationVetor.exercises;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class exercise4 {
+public class exercise5 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        int num, qtdPares;
+        int num, maiorV;
 
         System.out.print("Quantos numeros você vai digitar? ");
         num = sc.nextInt();
-        int[] pares = new int[num];
+        double[] numbers = new double[num];
 
         for (int i = 0; i < num; i++) {
             System.out.print("Digite um numero: ");
-            pares[i] = sc.nextInt();
+            numbers[i] = sc.nextDouble();
         }
 
-        qtdPares = 0;
-        System.out.println("NUMEROS PARES");
+        maiorV = 0;
         for (int i = 0; i < num; i++) {
-            if (pares[i] % 2 == 0) {
-                System.out.print(pares[i] + " ");
-                qtdPares++;
+            if (numbers[i] < maiorV) {
+                maiorV++;
             }
         }
 
-        System.out.println("\nQUANTIDADE DE PARES = " + qtdPares);
+        System.out.println("MAIOR VALOR = "+maiorV);
 
 
+
+
+
+
+
+
+
+        sc.close();
     }
 }

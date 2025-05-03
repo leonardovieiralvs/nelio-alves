@@ -12,10 +12,7 @@ public class exercise1 {
         int[] negativos = new int[cont];
         for (int i = 0; i < cont; i++) {
             System.out.print("Digite um numero: ");
-            int num = sc.nextInt();
-            if (num < 0) {
-                negativos[i] = num;
-            }
+            negativos[i] = sc.nextInt();
         }
 
         for (int negativo : negativos) {

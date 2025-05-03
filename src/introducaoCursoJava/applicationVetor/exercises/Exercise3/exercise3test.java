@@ -36,6 +36,7 @@ public class exercise3test {
         double media = sumAltura / cont;
         System.out.printf("Altura média: %.2f%n", media);
 
+        double mediaP = 0;
         System.out.println("Pessoas com menos de 16 anos: ");
         for (int i = 0; i < cont; i++) {
             if (people[i].getAge() < 16) {
