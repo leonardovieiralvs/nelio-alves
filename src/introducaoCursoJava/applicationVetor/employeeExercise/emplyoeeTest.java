@@ -15,7 +15,8 @@ public class emplyoeeTest {
 
 
         for (int i = 0; i < cont; i++) {
-            System.out.println("Emplyoee #"+(i+1));
+            System.out.println();
+            System.out.println("Emplyoee #" + (i + 1));
             System.out.print("Id: ");
             int id = sc.nextInt();
             sc.nextLine();
@@ -30,13 +31,28 @@ public class emplyoeeTest {
 
         System.out.print("Enter the emplyoee id that will have salary increase: ");
         int i = sc.nextInt();
-        System.out.println(emplyoees.indexOf(i));
+        emp = null;
+        for (Emplyoee e : emplyoees) {
+            if (e.getId() == i) {
+                emp = e;
+                break;
+            }
+        }
 
-//        for (Emplyoee emplyoee : emplyoees) {
-//            System.out.println(emplyoee);
-//        }
-//
+        if (emp != null) {
+            System.out.println();
+            System.out.print("Enter the percentage: ");
+            double percentage = sc.nextDouble();
+            emp.increaseSalary(percentage);
+        } else {
+            System.out.println("This id does not exists! ");
+        }
 
-        sc.close();
+        System.out.println("List of emplyoee");
+        for (Emplyoee emplyoee : emplyoees) {
+            System.out.println(emplyoee);
+        }
+
+
     }
 }
