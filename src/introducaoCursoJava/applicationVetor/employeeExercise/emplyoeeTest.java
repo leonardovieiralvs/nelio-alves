@@ -7,12 +7,10 @@ public class emplyoeeTest {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Emplyoee emp = new Emplyoee();
-        List<Emplyoee> emplyoees = new ArrayList<>();
+        List<Emplyoee> list = new ArrayList<>();
 
         System.out.print("How many emplyoees will be registered? ");
         int cont = sc.nextInt();
-
 
         for (int i = 0; i < cont; i++) {
             System.out.println();
@@ -25,31 +23,23 @@ public class emplyoeeTest {
             System.out.print("Salary: ");
             double salary = sc.nextDouble();
 
-            emp = new Emplyoee(id, name, salary);
-            emplyoees.add(emp);
+            Emplyoee emp = new Emplyoee(id, name, salary);
+            list.add(emp);
         }
 
         System.out.print("Enter the emplyoee id that will have salary increase: ");
-        int i = sc.nextInt();
-        emp = null;
-        for (Emplyoee e : emplyoees) {
-            if (e.getId() == i) {
-                emp = e;
-                break;
-            }
-        }
-
-        if (emp != null) {
-            System.out.println();
-            System.out.print("Enter the percentage: ");
-            double percentage = sc.nextDouble();
-            emp.increaseSalary(percentage);
+        int idSalary = sc.nextInt();
+        Emplyoee emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
+        if (emp == null) {
+            System.out.println("This id does not exist! ");
+            System.out.println(" ");
         } else {
-            System.out.println("This id does not exists! ");
+            System.out.print("Enter the percentage: ");
+            int percentage = sc.nextInt();
+            emp.increaseSalary(percentage);
         }
 
-        System.out.println("List of emplyoee");
-        for (Emplyoee emplyoee : emplyoees) {
+        for (Emplyoee emplyoee : list) {
             System.out.println(emplyoee);
         }
 
