@@ -33,6 +33,7 @@ public class emplyoeeTest {
         Integer pos = hasId(list, idSalary);
         if (pos == null) {
             System.out.println("This id does not exist! ");
+            System.out.println(" ");
         } else {
             System.out.print("Enter the percentage: ");
             int percentage = sc.nextInt();
