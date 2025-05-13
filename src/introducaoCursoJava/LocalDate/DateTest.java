@@ -3,9 +3,12 @@ package introducaoCursoJava.LocalDate;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class DateTest {
     public static void main(String[] args) {
+
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         LocalDate date = LocalDate.now();
         System.out.println(date);
@@ -19,9 +22,14 @@ public class DateTest {
         Instant instantDate = Instant.now();
         System.out.println(instantDate);
 
-        Instant instantDate2 = Instant.parse("2024-02-11T23:37:17Z");
-        System.out.println(instantDate2);
-        Instant instantDate3 = Instant.parse("2024-02-11T23:37:17-03:00");
-        System.out.println(instantDate3);
+        LocalDate d03 = LocalDate.parse("25/05/2023", fmt);
+        System.out.println(d03);
+        System.out.println("-_-");
+
+        LocalDate date00 = LocalDate.of(2022, 3, 22);
+        System.out.println(date00);
+
+        LocalDateTime date001 = LocalDateTime.of(1999, 9, 28, 20, 3);
+        System.out.println(date001);
     }
 }
