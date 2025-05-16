@@ -1,4 +1,4 @@
-package introducaoCursoJava.LocalDate;
+package introducaoCursoJava.bLocalDate;
 
 import java.time.Instant;
 import java.time.LocalDate;

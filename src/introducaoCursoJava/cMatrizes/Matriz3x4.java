@@ -1,4 +1,4 @@
-package introducaoCursoJava.matrizes;
+package introducaoCursoJava.cMatrizes;
 
 import java.util.Scanner;
 
