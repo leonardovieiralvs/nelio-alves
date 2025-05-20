@@ -3,12 +3,16 @@ package introducaoCursoJava.dEnumeracao2.Service;
 import introducaoCursoJava.dEnumeracao2.Entities.WorkerLevel;
 
 import java.time.Year;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Worker {
     private String name;
     private WorkerLevel level;
     private Double baseSalary;
+
     private Departament departament;
+    private List<HourContract> contracts = new ArrayList<>();
 
     public Worker() {
     }
@@ -36,7 +40,7 @@ public class Worker {
         return departament;
     }
 
-    public void addContract(HourContract contract){
+    public void addContract(HourContract contract) {
 
     }
 

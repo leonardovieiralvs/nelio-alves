@@ -26,7 +26,6 @@ public class Program {
         System.out.print("Base salary: ");
         double salary = sc.nextDouble();
 
-        worker = new Worker(name, level, salary, departmentName);
 
         System.out.print("How many contracts to this worker? ");
         int contracts = sc.nextInt();
