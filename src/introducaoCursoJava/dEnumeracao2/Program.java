@@ -1,10 +1,9 @@
 package introducaoCursoJava.dEnumeracao2;
 
-import introducaoCursoJava.dEnumeracao2.Entities.WorkerLevel;
-import introducaoCursoJava.dEnumeracao2.Service.Departament;
-import introducaoCursoJava.dEnumeracao2.Service.Worker;
+import introducaoCursoJava.dEnumeracao2.entities.enums.WorkerLevel;
+import introducaoCursoJava.dEnumeracao2.entities.Departament;
+import introducaoCursoJava.dEnumeracao2.entities.Worker;
 
-import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 

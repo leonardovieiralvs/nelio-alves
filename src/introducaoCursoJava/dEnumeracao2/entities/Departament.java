@@ -1,4 +1,4 @@
-package introducaoCursoJava.dEnumeracao2.Service;
+package introducaoCursoJava.dEnumeracao2.entities;
 
 public class Departament {
     private String name;

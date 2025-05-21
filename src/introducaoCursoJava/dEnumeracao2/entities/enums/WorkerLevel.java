@@ -1,4 +1,4 @@
-package introducaoCursoJava.dEnumeracao2.Entities;
+package introducaoCursoJava.dEnumeracao2.entities.enums;
 
 public enum WorkerLevel {
     JUNIOR,

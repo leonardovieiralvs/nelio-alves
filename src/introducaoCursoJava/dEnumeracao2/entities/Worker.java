@@ -1,8 +1,7 @@
-package introducaoCursoJava.dEnumeracao2.Service;
+package introducaoCursoJava.dEnumeracao2.entities;
 
-import introducaoCursoJava.dEnumeracao2.Entities.WorkerLevel;
+import introducaoCursoJava.dEnumeracao2.entities.enums.WorkerLevel;
 
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,14 +40,14 @@ public class Worker {
     }
 
     public void addContract(HourContract contract) {
-
+        contracts.add(contract);
     }
 
     public void removeContract(HourContract contract) {
-
+        contracts.remove(contract);
     }
 
-//    public double income(Integer year, Integer month) {
-//        return
-//    }
+    public double income(int year, int month) {
+        return
+    }
 }
