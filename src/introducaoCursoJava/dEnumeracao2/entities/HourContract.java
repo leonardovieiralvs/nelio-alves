@@ -29,10 +29,6 @@ public class HourContract {
         return valuePerHour;
     }
 
-    public double setValuePerHour() {
-        return valuePerHour * hours;
-    }
-
     public Integer getHours() {
         return hours;
     }
