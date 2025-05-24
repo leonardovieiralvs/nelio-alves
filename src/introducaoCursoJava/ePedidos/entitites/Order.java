@@ -76,7 +76,7 @@ public class Order {
     public double total() {
         double sum = 0;
         for (OrderItem orderItem : items) {
-            sum += orderItem.getPrice() * orderItem.getQuantity();
+            sum += orderItem.subTotal();
         }
         return sum;
     }
