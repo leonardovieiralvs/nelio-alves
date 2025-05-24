@@ -7,13 +7,9 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name) {
+    public Product(String name, Double price) {
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return name;
+        this.price = price;
     }
 
     public String getName() {

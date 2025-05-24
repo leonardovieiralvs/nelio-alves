@@ -24,12 +24,16 @@ public class Client {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(name+" ");
-        sb.append("("+sdf.format(birthDate)+") - ");
-        sb.append(email);
-        return sb.toString();
+        return name + " " +
+                "(" + sdf.format(birthDate) + ") - "
+                + email;
     }
+
+    //        StringBuilder sb = new StringBuilder();
+//        sb.append(name+" ");
+//        sb.append("("+sdf.format(birthDate)+") - ");
+//        sb.append(email);
+//        return sb.toString();
 
     public void setName(String name) {
         this.name = name;

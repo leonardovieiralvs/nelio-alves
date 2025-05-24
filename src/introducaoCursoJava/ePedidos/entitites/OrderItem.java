@@ -16,12 +16,12 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(product.getName()+", $");
-        sb.append(price+", ");
-        sb.append("Quantity: "+quantity);
-        sb.append(subTotal());
-        return sb.toString();
+        return getProduct().getName()
+                + ", $"
+                + String.format("%.2f", price)
+                + ", Quantity: "+quantity
+                + ", Subtotal: $"
+                + String.format("%.2f", subTotal());
     }
 
     public Integer getQuantity() {
