@@ -35,7 +35,7 @@ public class Program {
         int N = sc.nextInt();
         for (int i = 0; i < N; i++) {
             System.out.print("Enter #"+(i+1)+ " item data: ");
-            String productName = sc.next();
+            String productName = sc.next().toUpperCase();
             System.out.print("Product price: ");
             Double produtctPrice = sc.nextDouble();
             System.out.print("Quantity: ");
