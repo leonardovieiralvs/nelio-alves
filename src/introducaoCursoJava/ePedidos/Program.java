@@ -16,7 +16,6 @@ public class Program {
         Locale.setDefault(Locale.US);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Scanner sc = new Scanner(System.in);
-        OrderItem orderItem = new OrderItem();
 
         System.out.println("Enter client data: ");
         System.out.print("Name: ");
