@@ -1,7 +1,7 @@
 package introducaoCursoJava.fHerançaEPolimorfismo.entities;
 
 public class Employee {
-    private String name;
+    protected String name;
     private Integer hours;
     private Double valuePerHour;
 
@@ -13,8 +13,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "PAYMENTS: \n"
-        +name+" - $"+payment();
+        return name+" - $"+payment();
     }
 
     public double payment() {

@@ -18,8 +18,8 @@ public class Program {
         System.out.print("Enter the number of employees: ");
         int n = sc.nextInt();
 
-        for (int i = 1; i <= n ; i++) {
-            System.out.println("Employee #"+i+" data: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.println("Employee #" + i + " data: ");
             System.out.print("Outsourced (y/n)? ");
             char character = sc.next().charAt(0);
             if (character == 'n') {
@@ -46,6 +46,16 @@ public class Program {
                 outEmp.add(outsourcedEmployee);
             }
 
+
+        }
+
+        System.out.println("PAYMENTS: ");
+        for (Employee employee : emp) {
+            System.out.println(employee);
+        }
+
+        for (OutsourcedEmployee outsourcedEmployee : outEmp) {
+            System.out.println(outsourcedEmployee);
         }
     }
 }
