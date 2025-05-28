@@ -4,6 +4,7 @@ public class Employee {
     protected String name;
     private Integer hours;
     private Double valuePerHour;
+    private OutsourcedEmployee outsourcedEmployee;
 
     public Employee(String name, Integer hours, Double valuePerHour) {
         this.name = name;
