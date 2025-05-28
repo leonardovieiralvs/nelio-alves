@@ -1,8 +1,10 @@
 package introducaoCursoJava.fHerançaEPolimorfismo.ExercicioFixacao.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UsedProduct extends Product {
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     private Date manufactureDate;
 
     public UsedProduct(String name, Double price, Date manufactureDate) {
@@ -12,7 +14,12 @@ public class UsedProduct extends Product {
 
     @Override
     public String toString() {
-        return null;
+        return name
+                + " (used) $"
+                + String.format("%.2f", price)
+                + " (Manufacture date: "
+                + sdf.format(manufactureDate)
+                + ")";
     }
 
     public Date getManufactureDate() {

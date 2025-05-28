@@ -1,8 +1,8 @@
 package introducaoCursoJava.fHerançaEPolimorfismo.ExercicioFixacao.entities;
 
 public class Product {
-    private String name;
-    private Double price;
+    protected String name;
+    protected Double price;
 
     public Product() {
     }
@@ -14,7 +14,9 @@ public class Product {
 
     @Override
     public String toString() {
-    return this.name +"$ +
+        return name
+                + " $"
+                + String.format("%.2f", price);
     }
 
     public String getName() {

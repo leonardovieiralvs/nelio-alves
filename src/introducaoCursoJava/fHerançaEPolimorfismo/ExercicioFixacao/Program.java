@@ -41,7 +41,11 @@ public class Program {
                 list.add(cproduct);
             }
         }
-
+        System.out.println();
+        System.out.println("PRICE TAGS: ");
+        for (Product product : list) {
+            System.out.println(product);
+        }
 
     }
 }

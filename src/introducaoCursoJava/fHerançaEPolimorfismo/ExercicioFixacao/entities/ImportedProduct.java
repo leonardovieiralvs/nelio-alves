@@ -1,27 +1,32 @@
 package introducaoCursoJava.fHerançaEPolimorfismo.ExercicioFixacao.entities;
 
 public class ImportedProduct extends Product {
-    private Double customsFree;
+    private Double customsFee;
 
     public ImportedProduct(String name, Double price, Double customsFree) {
         super(name, price);
-        this.customsFree = customsFree;
+        this.customsFee = customsFree;
     }
 
     public double totalPrice() {
-        return 0;
+        return price + customsFee;
     }
 
     @Override
     public String toString() {
-        return null;
+        return name
+                + " $"
+                + String.format("%.2f", totalPrice())
+                + " (Customs fee: $"
+                + customsFee
+                + ")";
     }
 
-    public Double getCustomsFree() {
-        return customsFree;
+    public Double getCustomsFee() {
+        return customsFee;
     }
 
-    public void setCustomsFree(Double customsFree) {
-        this.customsFree = customsFree;
+    public void setCustomsFee(Double customsFee) {
+        this.customsFee = customsFee;
     }
 }
