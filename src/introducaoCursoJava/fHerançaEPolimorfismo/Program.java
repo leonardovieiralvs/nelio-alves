@@ -37,7 +37,7 @@ public class Program {
                 list.add(emp);
             }
         }
-
+        System.out.println();
         System.out.println("PAYMENTS: ");
         for (Employee employee : list) {
             System.out.println(employee);
