@@ -15,14 +15,7 @@ public abstract class Pessoa {
         this.anualIncome = anualIncome;
     }
 
-    public abstract double fees();
-
-    @Override
-    public String toString() {
-        return getName()
-                + ": $ "
-                + String.format("%.2f", fees());
-    }
+    public abstract double tax();
 
     public String getName() {
         return name;

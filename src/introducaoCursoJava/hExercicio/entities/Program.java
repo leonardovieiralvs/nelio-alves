@@ -34,10 +34,19 @@ public class Program {
         }
         System.out.println();
         System.out.println("TAXES PAID: ");
-
         for (Pessoa pessoa : list) {
-            
+            System.out.println(pessoa.getName() + ": $ "+ String.format("%.2f", pessoa.tax()));
         }
+
+        System.out.println();
+
+        double sum = 0.0;
+        for (Pessoa pessoa : list) {
+            sum += pessoa.tax();
+        }
+
+        System.out.println("TOTAL TAXES: $ "+ sum);
+
 
     }
 }

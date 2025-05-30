@@ -9,8 +9,12 @@ public class PessoaJuridica extends Pessoa {
     }
 
     @Override
-    public double fees() {
-        return nEmployees * 14 / 100;
+    public double tax() {
+        if (nEmployees > 10) {
+            return getAnualIncome() * 0.14;
+        } else {
+            return getAnualIncome() * 0.16;
+        }
     }
 
     public Double getnEmployees() {

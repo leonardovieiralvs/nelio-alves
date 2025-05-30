@@ -12,8 +12,9 @@ public class PessoaFisica extends Pessoa {
     }
 
     @Override
-    public double fees() {
-        return (anualIncome * 25 / 100) - (health * 50 / 100);
+    public double tax() {
+      double basicTax = (getAnualIncome() < 20000) ? getAnualIncome() * 0.15 : getAnualIncome() * 0.25;
+        return basicTax;
     }
 
     public Double getHealth() {
