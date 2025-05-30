@@ -35,6 +35,9 @@ public class Program {
         System.out.println();
         System.out.println("TAXES PAID: ");
 
-        
+        for (Pessoa pessoa : list) {
+            
+        }
+
     }
 }

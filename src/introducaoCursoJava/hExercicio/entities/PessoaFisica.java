@@ -1,11 +1,14 @@
 package introducaoCursoJava.hExercicio.entities;
 
 public class PessoaFisica extends Pessoa {
-    private Double health;
+    protected Double health;
 
     public PessoaFisica(String name, Double anualIncome, Double health) {
         super(name, anualIncome);
         this.health = health;
+    }
+
+    public PessoaFisica() {
     }
 
     @Override

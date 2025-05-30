@@ -1,7 +1,7 @@
 package introducaoCursoJava.hExercicio.entities;
 
 public class PessoaJuridica extends Pessoa {
-    private Double nEmployees;
+    protected Double nEmployees;
 
     public PessoaJuridica(String name, Double anualIncome, Double nEmployees) {
         super(name, anualIncome);

@@ -4,12 +4,25 @@ public abstract class Pessoa {
     protected String name;
     protected Double anualIncome;
 
+    private PessoaFisica pessoaFisica;
+    private PessoaJuridica pessoaJuridica;
+
+    public Pessoa() {
+    }
+
     public Pessoa(String name, Double anualIncome) {
         this.name = name;
         this.anualIncome = anualIncome;
     }
 
     public abstract double fees();
+
+    @Override
+    public String toString() {
+        return getName()
+                + ": $ "
+                + String.format("%.2f", fees());
+    }
 
     public String getName() {
         return name;
@@ -26,4 +39,6 @@ public abstract class Pessoa {
     public void setAnualIncome(Double anualIncome) {
         this.anualIncome = anualIncome;
     }
+
+
 }
