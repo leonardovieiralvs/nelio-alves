@@ -1,5 +1,6 @@
 package introducaoCursoJava.iExceptions.exerciseExceptions.entities;
 
+import introducaoCursoJava.iExceptions.domainexceptions.DomainException;
 import introducaoCursoJava.iExceptions.exerciseExceptions.entities.domainexcpetions.DomainExceptions;
 
 public class Account {
@@ -19,15 +20,15 @@ public class Account {
     }
 
     public void deposit(double amount) {
-        this.balance = amount;
+        this.balance += amount;
     }
 
     public void withdraw(double amount) {
         if (this.balance == 0 || amount > withdrawLimit){
-            throw new IllegalArgumentException ("The amount exceeds withdraw limit");
+            throw new DomainExceptions("The amount exceeds withdraw limit");
         }
         if (amount > balance) {
-            throw new IllegalArgumentException ("Not enough balance");
+            throw new DomainExceptions ("Not enough balance");
         }
 
         this.balance -= amount;
