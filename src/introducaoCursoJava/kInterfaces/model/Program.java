@@ -32,13 +32,13 @@ public class Program {
         System.out.print("Entre com o preço por dia: ");
         double pricePerDay = sc.nextDouble();
 
-        RentalService service = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+        RentalService service = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
         service.processInvoice(carRental);
 
         System.out.println("FATURA: ");
-        System.out.println("Pagamento basico: " + carRental.getInvoice().getBasicPayment());
-        System.out.println("Imposto: " + carRental.getInvoice().getTax());
-        System.out.println("Pagamento total: " + carRental.getInvoice().getTotalPayment());
+        System.out.println("Pagamento basico: " + String.format("%.2f", carRental.getInvoice().getBasicPayment()));
+        System.out.println("Imposto: " + String.format("%.2f", carRental.getInvoice().getTax()));
+        System.out.println("Pagamento total: " + String.format("%.2f", carRental.getInvoice().getTotalPayment()));
 
     }
 }
