@@ -1,26 +1,32 @@
 package introducaoCursoJava.kInterface1.entitites;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 
 public class Installment {
-    private LocalDate dueDate;
+    private static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private LocalDate date;
     private Double amount;
 
     public Installment() {
     }
 
     public Installment(LocalDate dueDate, Double amount) {
-        this.dueDate = dueDate;
+        this.date = dueDate;
         this.amount = amount;
     }
 
-    public LocalDate getDueDate() {
-        return dueDate;
+    @Override
+    public String toString() {
+        return dtf.format(getDate()) + " - " + String.format("%.2f",getAmount());
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public Double getAmount() {

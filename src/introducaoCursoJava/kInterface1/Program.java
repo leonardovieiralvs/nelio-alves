@@ -29,13 +29,16 @@ public class Program {
         Contract obj = new Contract(number, date, totalValue);
 
         System.out.print("Entre com o numero de parcelas: ");
-        int numInstallment = sc.nextInt();
+        int num = sc.nextInt();
 
 
-        ContractService service = new ContractService();
+        ContractService service = new ContractService(new PaypalService());
 
-        service.processContract(obj, numInstallment);
+        service.processContract(obj, num);
 
-
+        System.out.println("FATURA: ");
+        for (Installment installment : obj.getInstallment()) {
+            System.out.println(installment);
+        }
     }
 }
