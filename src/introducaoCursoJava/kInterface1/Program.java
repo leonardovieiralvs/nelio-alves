@@ -6,7 +6,6 @@ import introducaoCursoJava.kInterface1.service.ContractService;
 import introducaoCursoJava.kInterface1.service.OnlinePaymentService;
 import introducaoCursoJava.kInterface1.service.PaypalService;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
