@@ -22,4 +22,9 @@ public class ComboDevice extends Device implements Scanner, Printer {
     public String scan() {
         return "comboDevice SCANNER";
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
