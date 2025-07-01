@@ -1,23 +1,22 @@
 package lGenerics.exercises.calculationService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
+        List<Integer> myInts = Arrays.asList(5, 2, 10);
+        myInts.add;
+        printList(myInts);
 
-        Product product = new Product();
-        List<Product> list = new ArrayList<>();
+        List<String> myStr = Arrays.asList("Maria", "Alex", "Bob");
+        printList(myStr);
 
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < 3; i++) {
-            String name = sc.next();
-            Double price = sc.nextDouble();
-            list.
+    }
+
+    public static void printList(List<?> list) {
+        for (Object obj : list) {
+            System.out.println(obj);
         }
 
-        System.out.println(product);
     }
 }
