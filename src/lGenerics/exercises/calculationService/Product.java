@@ -1,10 +1,19 @@
 package lGenerics.exercises.calculationService;
 
+import java.util.Objects;
+
 public class Product {
     private String name;
     private Double price;
 
     public Product() {
+    }
+
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(price);
     }
 
     public Product(String name, Double price) {
