@@ -14,13 +14,9 @@ public class Test {
         list.add(new Product("Abobora", 2.70));
         list.add(new Product("Caju", 5.0));
 
-        Comparator<Product> comp = new Comparator<Product>() {
-            @Override
-            public int compare(Product o1, Product o2) {
-                return o1.getName().compareTo(o2.getName());
-            }
-        };
+        Comparator<Product> comp = (p1, p2) -> p1.getName().compareTo(p2.getName());
 
+        list.sort(comp);
 
         for (Product p : list) {
             System.out.println(p);
