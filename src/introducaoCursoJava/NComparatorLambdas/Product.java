@@ -1,6 +1,11 @@
 package introducaoCursoJava.NComparatorLambdas;
 
-public class Product {
+public class Product implements Comparable<Product> {
+    @Override
+    public int compareTo(Product o) {
+        return getName().toUpperCase().compareTo(o.getName().toUpperCase());
+    }
+
     private String name;
     private Double price;
 
@@ -32,4 +37,6 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+
 }

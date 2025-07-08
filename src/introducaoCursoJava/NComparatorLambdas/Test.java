@@ -1,9 +1,6 @@
 package introducaoCursoJava.NComparatorLambdas;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -16,10 +13,16 @@ public class Test {
 
         Comparator<Product> comp = (p1, p2) -> p1.getName().compareTo(p2.getName());
 
-        list.sort(comp);
+        Collections.sort(list);
 
         for (Product p : list) {
             System.out.println(p);
+        }
+        System.out.println("--");
+        list.sort(new MyComparator());
+
+        for (Product p : list) {
+            System.out.println(p); 
         }
 
     }
