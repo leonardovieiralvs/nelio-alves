@@ -12,6 +12,18 @@ public class Product {
         this.price = price;
     }
 
+    public boolean staticProduct() {
+        return price >= 100;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
