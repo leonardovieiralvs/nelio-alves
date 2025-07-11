@@ -21,7 +21,7 @@ public class Test {
 
         Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
 
-        List<String> stringList = list.stream().map(new NameToUpperCase()).collect(Collectors.toList());
+        List<String> stringList = list.stream().map(Product::UpperCaseName).collect(Collectors.toList());
         stringList.forEach(System.out::println);
     }
 }

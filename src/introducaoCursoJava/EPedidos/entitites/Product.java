@@ -12,8 +12,8 @@ public class Product {
         this.price = price;
     }
 
-    public boolean staticProduct() {
-        return price >= 100;
+    public static String UpperCaseName(Product p) {
+        return p.getName().toUpperCase();
     }
 
     @Override
