@@ -19,9 +19,9 @@ public class Test {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.00));
 
-        Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
+        Product ps = new Product();
+        double sum = ps.filterInitial(list, p -> p.getPrice() < 100);
+        System.out.println("Price: " + String.format("%.2f", sum));
 
-        List<String> stringList = list.stream().map(Product::UpperCaseName).collect(Collectors.toList());
-        stringList.forEach(System.out::println);
     }
 }

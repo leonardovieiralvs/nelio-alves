@@ -1,5 +1,8 @@
 package introducaoCursoJava.EPedidos.entitites;
 
+import java.util.List;
+import java.util.function.Predicate;
+
 public class Product {
     private String name;
     private Double price;
@@ -14,6 +17,16 @@ public class Product {
 
     public static String UpperCaseName(Product p) {
         return p.getName().toUpperCase();
+    }
+
+    public double filterInitial(List<Product> product, Predicate<Product> criterio) {
+        double sum = 0.0;
+        for (Product p : product) {
+            if (criterio.test(p)) {
+                sum += p.getPrice();
+            }
+        }
+        return sum;
     }
 
     @Override
