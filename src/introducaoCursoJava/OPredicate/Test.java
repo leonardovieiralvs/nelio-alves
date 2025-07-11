@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
@@ -20,8 +21,7 @@ public class Test {
 
         Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
 
-        list.forEach(cons);
-        list.forEach(System.out::println);
-
+        List<String> stringList = list.stream().map(new NameToUpperCase()).collect(Collectors.toList());
+        stringList.forEach(System.out::println);
     }
 }
